@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1777305991814791618.html"
 	],
 	prefix: "",
 	theme: {
@@ -16,6 +17,10 @@ export default {
 			screens: {
 				'2xl': '1400px'
 			}
+		},
+		fontFamily: {
+			cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+			ibm: ['"IBM Plex Sans"', 'sans-serif'],
 		},
 		extend: {
 			colors: {
@@ -88,7 +93,24 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.4s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out',
+				'modal-in': 'modal-in 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+			},
+			keyframes: {
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' },
+				},
+				'slide-up': {
+					from: { opacity: '0', transform: 'translateY(30px)' },
+					to: { opacity: '1', transform: 'translateY(0)' },
+				},
+				'modal-in': {
+					from: { opacity: '0', transform: 'translateY(20px) scale(0.97)' },
+					to: { opacity: '1', transform: 'translateY(0) scale(1)' },
+				},
 			}
 		}
 	},
